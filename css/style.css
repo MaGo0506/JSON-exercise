@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background: #d9e5f9;
+}
+
+.mainBlock {
+  padding: 20px 0px;
+  text-align: center;
+}
+.mainBlock .textBlock {
+  display: inline-block;
+  padding: 20px;
+  background: snow;
+  width: 10%;
+  height: 100px;
+  text-align: center;
+  overflow: hidden;
+}

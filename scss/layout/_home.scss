@@ -1,0 +1,14 @@
+.mainBlock{
+    padding: 20px 0px;
+    text-align: center;
+
+    .textBlock {
+        display: inline-block;
+        padding: 20px;
+        background: snow;
+        width: 10%;
+        height: 100px;
+        text-align: center;
+        overflow: hidden;
+    }
+}
