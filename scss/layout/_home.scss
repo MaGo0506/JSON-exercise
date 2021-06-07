@@ -6,9 +6,84 @@
         display: inline-block;
         padding: 20px;
         background: snow;
-        width: 10%;
+        width: 9%;
         height: 100px;
         text-align: center;
         overflow: hidden;
+        cursor: pointer;
+
+        &.active {
+            background: rgba(255, 250, 250, 0.61); 
+        }
     }
+}
+
+.photoHolder {
+    padding: 20px 0px;
+    text-align: center;
+
+    .photoCard {
+        display: none;
+        margin: 20px;
+        width: 15%;
+        border: 1px solid snow;
+        background: snow;
+
+        &.active {
+            display: inline-block;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        p {
+            padding: 20px 5px;
+        }
+
+        button {
+            padding: 10px;
+            margin-bottom: 5px;
+            background: #d9e5f9;
+            font-weight: bold;
+            border-radius: 20px;
+            border: 1px solid lightseagreen;
+            cursor: pointer;
+        }
+    }
+}
+
+.mainGallery {
+    .galleryPhoto {
+        position: relative;
+        display: none;
+
+        &.active {
+            display: inline-block;
+        }
+
+    }
+
+    p {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        cursor: pointer;
+        font-size: larger;
+        color: red;
+        border: 1px solid red;
+        padding: 10px 15px;
+        border-radius: 50%;
+    }
+}
+
+.shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: none;
+    background: rgba(0,0,0,0.45);
 }

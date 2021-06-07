@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background: #d9e5f9;
 }
 
@@ -14,14 +14,113 @@ body {
   padding: 20px 0px;
   text-align: center;
 }
-
 .mainBlock .textBlock {
   display: inline-block;
   padding: 20px;
   background: snow;
-  width: 10%;
+  width: 9%;
   height: 100px;
   text-align: center;
   overflow: hidden;
+  cursor: pointer;
 }
-/*# sourceMappingURL=style.css.map */
+.mainBlock .textBlock.active {
+  background: rgba(255, 250, 250, 0.61);
+}
+
+.photoHolder {
+  padding: 20px 0px;
+  text-align: center;
+}
+.photoHolder .photoCard {
+  display: none;
+  margin: 20px;
+  width: 15%;
+  border: 1px solid snow;
+  background: snow;
+}
+.photoHolder .photoCard.active {
+  display: inline-block;
+}
+.photoHolder .photoCard img {
+  width: 100%;
+}
+.photoHolder .photoCard p {
+  padding: 20px 5px;
+}
+.photoHolder .photoCard button {
+  padding: 10px;
+  margin-bottom: 5px;
+  background: #d9e5f9;
+  font-weight: bold;
+  border-radius: 20px;
+  border: 1px solid lightseagreen;
+  cursor: pointer;
+}
+
+.mainGallery .galleryPhoto {
+  position: relative;
+  display: none;
+}
+.mainGallery .galleryPhoto.active {
+  display: inline-block;
+}
+.mainGallery p {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  font-size: larger;
+  color: red;
+  border: 1px solid red;
+  padding: 10px 15px;
+  border-radius: 50%;
+}
+
+.shadow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  display: none;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.loader {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #d9e5f9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.loader.hidden {
+  -webkit-animation: fadeOut 2s;
+          animation: fadeOut 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
